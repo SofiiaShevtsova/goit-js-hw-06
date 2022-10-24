@@ -1,14 +1,14 @@
 const listCategories = document.querySelector(`#categories`);
 const listCategoryItems = document.querySelectorAll(`.item`);
 
-const getCategory = (categories) => {
   console.log(
     `Number of categories: ${listCategories.querySelectorAll(`.item`).length}`
-  );
-  const categoryNameArray = [...categories].map(
+);
+  
+  const categoryNameArray = [...listCategoryItems].map(
     (category) => category.querySelector(`h2`).textContent
   );
-  const categoryLengthArray = [...categories].map(
+  const categoryLengthArray = [...listCategoryItems].map(
     (category) => category.querySelectorAll(`li`).length
   );
 
@@ -16,6 +16,4 @@ const getCategory = (categories) => {
     console.log(`Category: ${categoryNameArray[i]}`);
     console.log(`Elements: ${categoryLengthArray[i]}`);
   }
-};
 
-console.log(getCategory(listCategoryItems));
