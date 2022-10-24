@@ -1,12 +1,10 @@
 const listCategories = document.querySelector(`#categories`);
 const listCategoryItems = document.querySelectorAll(`.item`);
 
-const getCategoriesLength = () =>
-  `Number of categories: ${listCategories.querySelectorAll(`.item`).length}`;
-console.log(getCategoriesLength());
-
 const getCategory = (categories) => {
-  const categoryArray = [];
+  console.log(
+    `Number of categories: ${listCategories.querySelectorAll(`.item`).length}`
+  );
   const categoryNameArray = [...categories].map(
     (category) => category.querySelector(`h2`).textContent
   );
@@ -15,16 +13,9 @@ const getCategory = (categories) => {
   );
 
   for (let i = 0; i < categoryLengthArray.length; i += 1) {
-    const category = {
-      Category: ``,
-      Elements: 0,
-    };
-    category.Category = categoryNameArray[i];
-    category.Elements = categoryLengthArray[i];
-    console.log(category);
-    // categoryArray.push(category);
+    console.log(`Category: ${categoryNameArray[i]}`);
+    console.log(`Elements: ${categoryLengthArray[i]}`);
   }
-  // return categoryArray;
 };
 
 console.log(getCategory(listCategoryItems));

@@ -3,8 +3,8 @@ const nameColor = body.querySelector(".color");
 const btnChangeColor = body.querySelector(".change-color");
 
 btnChangeColor.addEventListener("click", () => {
-  body.style.backgroundColor = `${getRandomHexColor()}`;
-  nameColor.textContent = `${body.style.backgroundColor}`;
+  nameColor.textContent = `${getRandomHexColor()}`;
+  body.style.backgroundColor = nameColor.textContent;
 });
 
 function getRandomHexColor() {

@@ -6,4 +6,4 @@ const onFontControlerChange = (event) => {
   textForChange.style.fontSize = newFontSize;
 };
 
-fontControler.addEventListener("change", onFontControlerChange);
+fontControler.addEventListener("input", onFontControlerChange);

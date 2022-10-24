@@ -17,7 +17,7 @@ const addIngredients = (ingredients) => {
     ingredient.textContent = `${ingredientName}`;
     ingredientArray.push(ingredient);
   }
-  listIngredients.append(...ingredientArray);
+  return ingredientArray
 };
 
-console.log(addIngredients(ingredients));
+listIngredients.append(...(addIngredients(ingredients)));
